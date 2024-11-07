@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeApi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section id="pokemon-explorer">
+            <h2>Pokémon Explorer</h2>
+            <div class="input-group">
+                <input type="text" id="pokemonName" placeholder="Digite o nome do Pokémon..."> 
+                <button onclick="fetchDataPokemon()">Buscar Pokémon</button>
+                <button onclick="addPokemonToFavorites(document.getElementById('pokemonName').value)">Adicionar aos Favoritos</button>
+            </div>
+            <div class="result-container">
+                <img src="" alt="Pokémon Sprite" id="pokemonSprite" style="display: none">
+            </div>
+        </section>
+    
+        <section id="pokemon-info">
+            <h3>Informações do Pokémon</h3>
+            <div id="typesContainer" class="info-box"><strong>Tipos:</strong> <span id="pokemonTypes"></span></div>
+            <div id="abilitiesContainer" class="info-box"><strong>Habilidades:</strong> <span id="pokemonAbilities"></span></div>
+            <div id="locationsContainer" class="info-box"><strong>Localizações:</strong> <span id="pokemonLocations"></span></div>
+        </section>
+    
+        <section id="favorites">
+            <h2>Favoritos</h2>
+            <button onclick="listFavorites()">Exibir Favoritos</button>
+            <ul id="favoriteList"></ul>
+        </section>
+    </main>
+    
+    <script src="api.js">
+       
+    </script>
+</body>
+</html>
